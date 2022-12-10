@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Google Drive-like page</title>
+    <style>
+        /* Styles for the top navigation bar */
+        #navbar {
+            background-color: #f1f1f1;
+            height: 50px;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+        #navbar a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        #navbar input[type="text"] {
+            flex: 1;
+            height: 25px;
+            padding: 0 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Styles for the file and folder grid */
+        #grid {
+            margin: 15px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+        }
+        #grid .item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        #grid .item img {
+            max-width: 100%;
+        }
+        #grid .item h3 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#">Google Drive</a>
+        <input type="text" placeholder="Search Google Drive" />
+        <a href="#">Sign in</a>
+    </div>
+    <a href="https://slides.google.com/" target="_blank">
+    <div id="grid">
+        <div class="item">
+            <img src="c:\Users\icewa\Downloads\R (1).png" alt="Folder icon" />
+        </div>
+    </a>
+    <a href="https://sheets.google.com/" target="_blank">
+        <div class="item">
+            <img src="c:\Users\icewa\Downloads\R (2).png" alt="Image thumbnail" />
+        </div>
+        </a>
+        <a href="https://drive.google.com/" target="_blank">
+        <div class="item">
+            <img src="c:\Users\icewa\Downloads\R (3).png" alt="Document icon"  onclick=""/>
+        </div>
+        <a href="https://docs.google.com/" target="_blank">
+        <div class="item">
+            <img src="c:\Users\icewa\Downloads\Google-Docs-Icon-lead.jpg" alt="Spreadsheet icon" />
+        </div>
+    </a>
+    </div>
+    <style>
+        /* Styles for the email button */
+        a.email-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        a.email-button:hover {
+            background-color: #ccc;
+            color: rgb(255, 250, 250);
+        }
+    </style>
+    
+    <a href="mailto:eitan@septemberschool.org" class="email-button">Email my teacher</a>
+    
+<button onclick="sendEmail()">Send Email</button>
+
+<script>
+  function sendEmail() {
+    // Get the user's name
+    var name = prompt("enter your name:");
+    
+    // Build the email message
+    var message = "Hello! My name is " + name;
+    
+    // Use the built-in email functionality to send the email
+    window.location.href = "mailto:skymonkmckenzie@gmail.com?subject=Email from HTML button&body=" + message;
+  }
+</script>
+
+</body>
+</html>
